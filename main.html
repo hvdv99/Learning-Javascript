@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let min = 10; // Replace with your min value
+    let max = 50; // Replace with your max value
+    let randomInt = Math.floor(Math.random() * (max - min + 1)) + min;
+
+    let guess;
+    let guessInt;
+
+    do {
+        guess = prompt(`Guess a number between ${min} and ${max}`);
+        guessInt = parseInt(guess);
+        if (guessInt < randomInt) {
+            alert("It's higher!");
+        } else {
+            alert("It's lower!");
+        }
+    } while (guessInt != randomInt)
+</script>
+
+
+</body>
+</html>

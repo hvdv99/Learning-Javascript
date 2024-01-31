@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            border: 1px solid black;
+            padding: 10px;
+            margin: 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+    </style>
+    <script>
+        // Initialize 'a'
+        let a = 0;
+
+        // Function to update and display 'a'
+        function updateValue(change) {
+            a += change;
+            document.getElementById('valueDisplay').innerText = a;
+        }
+
+        // Function to initialize display
+        function init() {
+            document.getElementById('valueDisplay').innerText = a;
+        }
+
+        // Initialize display on page load
+        window.onload = init;
+    </script>
+</head>
+<body>
+<div>
+    <div id="valueDisplay"></div>
+    <div>
+        <div><button onclick="updateValue(1)">+</button></div>
+        <div><button onclick="updateValue(-1)">-</button></div>
+    </div>
+</div>
+</body>
+</html>
